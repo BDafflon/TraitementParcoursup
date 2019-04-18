@@ -8,7 +8,7 @@ $vide =""
 
 if ($listing -eq $vide -or $inputfolder -eq $vide -or $output -eq $vide -or $limit -eq 0){
     Write-Host "erreur de parametre"
-    Write-Host "utilisation : pdf2html -folder /path/to/Input/folder -output /path/to/output/folder"   
+    Write-Host "utilisation : TraitementParcoursup.ps1 -listing /path/to/students/folder -folder /path/to/Input/folder -output /path/to/output/folder -limit limit"   
 }
 else{
 
