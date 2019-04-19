@@ -8,7 +8,7 @@ $vide =""
 
 if ($listing -eq $vide -or $inputfolder -eq $vide -or $output -eq $vide -or $limit -eq 0){
     Write-Host "erreur de parametre"
-    Write-Host "utilisation : TraitementParcoursup.ps1 -listing /path/to/students/folder -folder /path/to/Input/folder -output /path/to/output/folder -limit limit"   
+    Write-Host "utilisation : pdf2html -folder /path/to/Input/folder -output /path/to/output/folder"   
 }
 else{
 
@@ -61,7 +61,7 @@ Write-Host "$line"
 			Copy-Item -Path "$inputfolder/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.pdf" -Destination "$outputfolder/$foldername/dossier"
 			
 			.\pdf2htmlEX.exe "$outputfolder/$foldername/dossier/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.pdf" "$outputfolder/$foldername/dossier/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.html"
-			.\dep\coloration\coloration3c.ps1 -file "$outputfolder/$foldername/dossier/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.html"  -negatif .\coloration\negatif.txt -positif .\coloration\positif.txt -blue .\coloration\blue.txt
+			.\coloration\coloration3c.ps1 -file "$outputfolder/$foldername/dossier/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.html"  -negatif .\coloration\negatif.txt -positif .\coloration\positif.txt -blue .\coloration\blue.txt
 			Remove-Item -Path "$outputfolder/$foldername/dossier/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.pdf" -Force
 		}
 		else{

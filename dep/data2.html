@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+        <html lang="fr">
+        <head>
+          <title>Titre de la page HTML</title>
+          <meta charset="utf-8" />
+          <style>
+              Styles CSS de la page
+          </style>
+		  <script src="./recrutement.js" charset="utf-8"> </script>
+        </head>
+ 
+          <body>
+		  <div id="form" style="float:left;  width:200px; ">
+		    <form name="f1" id="f1" action="" >
+    <br>
+    <input type="hidden" class="t1" id="A2" name="t1" value="">
+    <input type="button" name="b1" id="demarrer" value="Démarrer" onClick="next();">
+     <br>
+	 <br>
+    <input type="button" name="b3" value="Oui" onClick="accetper();">
+     <br>
+    <input type="button" name="b2" value="Non" onClick="refuser();">
+	 
+    <br>
+	<br>
+	<br>
+	<input type="button" name="b2" value="Sauvegarder" onClick="save();">
+    <br>
+	<br>
+	<br>
+	Progression:
+	<br>
+	<progress id="bar" value="0" max="50">
+</progress>
+<br>
+
+	<br>
+	<h3> Mode d emploi</h3>
+	<ol>
+		<li> Commencez la session en <br>  cliquant sur "Demarrer"</li>
+		<li> Apres lecture du dossier <br> choisissez le résultat</li>
+		<li> Pour faire une pause : <br> cliquez sur "sauvegarder" <br> et enregistrez le fichier<br> "data.csv" a coté du <br> fichier lecture.html</li>
+		<li> Une fois fini, attendez que  <br>le fichier resultat.csv <br> soit telechargé</li>
+	 
+	 </ol>
+</form>
+		  </div>
+		  <div id="iframe"  style="margin-left:250px;"   >
+             <iframe id="iframecontent" src="" height="800"  width="800"  frameborder="0" scrolling="yes"></iframe>
+			</div>
+          </body>
+        </html>
