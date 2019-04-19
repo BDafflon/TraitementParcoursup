@@ -46,7 +46,7 @@ Write-Host "$line"
 			Copy-Item -Path "$inputfolder/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.pdf" -Destination "$outputfolder/$foldername/dossier"
 			
 			.\pdf2htmlEX.exe "$outputfolder/$foldername/dossier/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.pdf" "$outputfolder/$foldername/dossier/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.html"
-			.\coloration\coloration3c.ps1 -file "$outputfolder/$foldername/dossier/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.html"  -negatif .\coloration\negatif.txt -positif .\coloration\positif.txt -blue .\coloration\blue.txt
+			.\dep\coloration\coloration3c.ps1 -file "$outputfolder/$foldername/dossier/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.html"  -negatif .\coloration\negatif.txt -positif .\coloration\positif.txt -blue .\coloration\blue.txt
 	
 		}
 		
@@ -61,7 +61,7 @@ Write-Host "$line"
 			Copy-Item -Path "$inputfolder/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.pdf" -Destination "$outputfolder/$foldername/dossier"
 			
 			.\pdf2htmlEX.exe "$outputfolder/$foldername/dossier/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.pdf" "$outputfolder/$foldername/dossier/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.html"
-			.\coloration\coloration3c.ps1 -file "$outputfolder/$foldername/dossier/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.html"  -negatif .\coloration\negatif.txt -positif .\coloration\positif.txt -blue .\coloration\blue.txt
+			.\dep\coloration\coloration3c.ps1 -file "$outputfolder/$foldername/dossier/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.html"  -negatif .\coloration\negatif.txt -positif .\coloration\positif.txt -blue .\coloration\blue.txt
 			Remove-Item -Path "$outputfolder/$foldername/dossier/dossiers_0691860X_Géniemécaniqueetproductique-$line-N$line.pdf" -Force
 		}
 		else{
